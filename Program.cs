@@ -10,6 +10,7 @@ namespace RegionZip
     {
         public class Region
         {
+            //Store Region name and list of associated Zip Codes
             public string strRegion;
             public List<string> lstZipCodes = new List<string>();
 
@@ -27,6 +28,7 @@ namespace RegionZip
 
         public class RegionZipFeed
         {
+            //Simple object used to feed information into main functionality
             public string strRegion;
             public string strZip;
 
@@ -65,20 +67,23 @@ namespace RegionZip
 
             //List<string> lstTempZip = new List<string>();
             Region tempRegion = new Region();
-            Region newRegion = new Region();
             int i = 0;
             //for each item in list that need to be fed into Region list
             foreach (RegionZipFeed thisFeed in lstFeed)
             {
+                //if Region already in list, update and readd to list of regions
                 if (lstRegions.Any(z => z.strRegion == thisFeed.strRegion))
                 {
-                    newRegion = tempRegion = lstRegions.Where(d => d.strRegion == thisFeed.strRegion).First();
+                    //store List object, update then place back into list
+                    tempRegion = lstRegions.Where(d => d.strRegion == thisFeed.strRegion).First();
                     i = lstRegions.IndexOf(tempRegion);
-                    newRegion.lstZipCodes.Add(thisFeed.strZip);
-                    lstRegions[i] = newRegion;
+                    tempRegion.lstZipCodes.Add(thisFeed.strZip);
+                    lstRegions[i] = tempRegion;
                 }
+                //else add Region to list if it does not exist
                 else
                 {
+                    //store feed information in temp object and then add to list
                     tempRegion = new Region();
                     tempRegion.strRegion = thisFeed.strRegion;
                     tempRegion.lstZipCodes.Add(thisFeed.strZip);
@@ -86,6 +91,7 @@ namespace RegionZip
                 }
             }
 
+            //cycle through Regions and output name and list of associated Zip Codes
             foreach (Region thisRegion in lstRegions)
             {
                 Console.Write(thisRegion.strRegion + Environment.NewLine + "___________________" + Environment.NewLine);
