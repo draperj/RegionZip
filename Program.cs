@@ -63,7 +63,7 @@ namespace RegionZip
             lstFeed.Add(new RegionZipFeed("Fairfield", "06904"));
             lstFeed.Add(new RegionZipFeed("Fairfield", "06905"));
 
-            List<string> lstTempZip = new List<string>();
+            //List<string> lstTempZip = new List<string>();
             Region tempRegion = new Region();
             Region newRegion = new Region();
             int i = 0;
@@ -79,9 +79,10 @@ namespace RegionZip
                 }
                 else
                 {
-                    lstTempZip = new List<string>();
-                    lstTempZip.Add(thisFeed.strZip);
-                    lstRegions.Add(new Region(thisFeed.strRegion, lstTempZip));
+                    tempRegion = new Region();
+                    tempRegion.strRegion = thisFeed.strRegion;
+                    tempRegion.lstZipCodes.Add(thisFeed.strZip);
+                    lstRegions.Add(tempRegion);
                 }
             }
 
