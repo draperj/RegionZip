@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace RegionZip
 {
+    //Store Region name and list of associated Zip Codes
     public class Region
     {
-        //Store Region name and list of associated Zip Codes
         public string strRegion;
         public List<ZipCodeGroup> lstZipCodes = new List<ZipCodeGroup>();
 
@@ -24,9 +24,9 @@ namespace RegionZip
         }
     }
 
+    //Simple object used to feed information into main functionality
     public class RegionZipFeed
     {
-        //Simple object used to feed information into main functionality
         public string strRegion;
         public string strZip;
 
@@ -42,6 +42,7 @@ namespace RegionZip
         }
     }
 
+    //Simple object to hold Start and End Zip Codes for Regions
     public class ZipCodeGroup
     {
         public string strStartZip;
@@ -58,6 +59,8 @@ namespace RegionZip
             this.strEndZip = thisEndZip;
         }
     }
+
+    //Overload for List class to allow populating of list using custom logic and data 
     public static class RegionList
     {
         public static void GetRegions(this List<Region> lstRegions, List<RegionZipFeed> lstFeed)
@@ -83,7 +86,7 @@ namespace RegionZip
                     ZipCodeGroup thisZipGroup = tempRegion.lstZipCodes.Last();
 
                     //esnure Zipcodes are of values that can be compared
-                    if(Int32.TryParse(thisFeed.strZip, out intTempZip) && Int32.TryParse(thisZipGroup.strEndZip, out intEndZip))
+                    if (Int32.TryParse(thisFeed.strZip, out intTempZip) && Int32.TryParse(thisZipGroup.strEndZip, out intEndZip))
                     {
                         //if the Zipcode is within the current group (increasing numerically by 1), add new end
                         if (intEndZip + 1 == intTempZip)
@@ -102,8 +105,8 @@ namespace RegionZip
                         //update Region in list
                         lstRegions[i] = tempRegion;
                     }
-                   
-                   
+
+
                 }
                 //else add Region to list if it does not exist
                 else
@@ -137,7 +140,7 @@ namespace RegionZip
             lstFeed.Add(new RegionZipFeed("Hartford", "06008"));
             lstFeed.Add(new RegionZipFeed("Hartford", "06010"));
             //Simulate bad data
-           lstFeed.Add(new RegionZipFeed("Hartford", "060sadfas13"));
+            lstFeed.Add(new RegionZipFeed("Hartford", "060sadfas13"));
 
             lstFeed.Add(new RegionZipFeed("New London", "06249"));
             lstFeed.Add(new RegionZipFeed("New London", "06254"));
