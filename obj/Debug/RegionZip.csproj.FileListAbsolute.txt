@@ -4,3 +4,6 @@ C:\Users\zzdraperj\Desktop\VS\RegionZip\RegionZip\bin\Debug\RegionZip.pdb
 C:\Users\zzdraperj\Desktop\VS\RegionZip\RegionZip\obj\Debug\RegionZip.csprojResolveAssemblyReference.cache
 C:\Users\zzdraperj\Desktop\VS\RegionZip\RegionZip\obj\Debug\RegionZip.exe
 C:\Users\zzdraperj\Desktop\VS\RegionZip\RegionZip\obj\Debug\RegionZip.pdb
+C:\Users\Joshua\Source\Repos\RegionZip\bin\Debug\RegionZip.exe.config
+C:\Users\Joshua\Source\Repos\RegionZip\obj\Debug\RegionZip.exe
+C:\Users\Joshua\Source\Repos\RegionZip\obj\Debug\RegionZip.pdb

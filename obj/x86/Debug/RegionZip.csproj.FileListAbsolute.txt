@@ -1,0 +1,6 @@
+C:\Users\Joshua\Source\Repos\RegionZip\bin\Debug\ConsoleApplication.exe.config
+C:\Users\Joshua\Source\Repos\RegionZip\bin\Debug\ConsoleApplication.exe
+C:\Users\Joshua\Source\Repos\RegionZip\bin\Debug\ConsoleApplication.pdb
+C:\Users\Joshua\Source\Repos\RegionZip\obj\x86\Debug\RegionZip.csprojResolveAssemblyReference.cache
+C:\Users\Joshua\Source\Repos\RegionZip\obj\x86\Debug\ConsoleApplication.exe
+C:\Users\Joshua\Source\Repos\RegionZip\obj\x86\Debug\ConsoleApplication.pdb
