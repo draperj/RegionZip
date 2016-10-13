@@ -99,12 +99,7 @@ namespace RegionZip
                             tempZipGroup.strEndZip = thisFeed.strZip;
                             tempRegion.lstZipCodes.Add(tempZipGroup);
                         }
-
-                        //update Region in list
-                        lstRegions[i] = tempRegion;
                     }
-
-
                 }
                 //else add Region to list if it does not exist
                 else
@@ -135,13 +130,13 @@ namespace RegionZip
             lstFeed.Add(new RegionZipFeed("Hartford", "06003"));
             lstFeed.Add(new RegionZipFeed("Hartford", "06006"));
             lstFeed.Add(new RegionZipFeed("Hartford", "06007"));
-            lstFeed.Add(new RegionZipFeed("Hartford", "06008"));
             lstFeed.Add(new RegionZipFeed("Hartford", "06010"));
             //Simulate bad data
             lstFeed.Add(new RegionZipFeed("Hartford", "060sadfas13"));
 
             lstFeed.Add(new RegionZipFeed("New London", "06249"));
             lstFeed.Add(new RegionZipFeed("New London", "06254"));
+            lstFeed.Add(new RegionZipFeed("Hartford", "06008"));
             lstFeed.Add(new RegionZipFeed("New London", "06360"));
 
             lstFeed.Add(new RegionZipFeed("Fairfield", "06901"));
